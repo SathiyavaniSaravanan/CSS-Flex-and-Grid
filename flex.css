@@ -1,0 +1,105 @@
+/* Flex Grow */
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.mysec
+{
+    background-color: aqua;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.cardcontainer
+{
+    background-color: blueviolet;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.card
+{
+    height: 100px;
+    width: 100px;
+    border: 2px solid green;
+    background-color: coral;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.card:nth-last-of-type(3)
+{
+    flex-grow: 3;
+}
+.card:nth-last-of-type(2):hover::after
+{
+    content: "hello";
+    color: white
+}
+
+/* Flex Shrink */
+.main
+{
+    background-color: aquamarine;
+    display: flex;
+    width: 100%;
+    height: 200px;
+}
+.myDiv
+{
+border: 2px solid red;
+flex-basis: 25%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.myDiv:nth-of-type(3)
+{
+ background-color: chartreuse;
+ flex-shrink:10;
+}
+
+/* Flex Basis */
+.basis
+{
+    height: 400px;
+    width: 100%;
+    border: 2px solid black;
+    background-color: paleturquoise;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.basisDiv
+{
+    height: 200px;
+    border: 2px solid purple;
+    background-color:mediumslateblue;
+    flex-basis: 25%;
+}
+
+/* Flex Flow & Flex Diretion  */
+.mainDiv
+{
+     background-color: yellow;
+     width: 300px;
+     height: 300px;  
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     /* flex-flow: column wrap; */
+     /* flex-flow: row wrap; */
+}
+.cards
+{
+    border: 1px solid red;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+}
